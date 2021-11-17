@@ -191,22 +191,12 @@ video[poster] {
   left: 43.5%;
   transform: translate(-50%, -50%);
   color: white; }
-  .hero-text h1 {
-    font-size: 4em;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 600; }
   .hero-text p {
     font-size: 1.5em;
     width: 80%; }
   .hero-text .quote_one {
     display: none; }
   .hero-text .quote_two {
-    display: none; }
-  .hero-text .quote_three {
-    display: none; }
-  .hero-text .quote_four {
-    display: none; }
-  .hero-text .quote_five {
     display: none; }
   .hero-text .button {
     background-color: #E54B0E;
@@ -223,6 +213,32 @@ video[poster] {
     border: 2px solid #E54B0E; }
   .hero-text .button-margin {
     margin-top: 5%; }
+
+h1 {
+  font-size: 4em;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  border-right: solid 3px #E54B0E;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* Animation */
+h1 {
+  animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+
+/* text animation */
+@keyframes animated-text {
+  from {
+    width: 0; }
+  to {
+    width: 600px; } }
+
+/* cursor animations */
+@keyframes animated-cursor {
+  from {
+    border-right-color: #E54B0E; }
+  to {
+    border-right-color: transparent; } }
 
 /* ATRIBUTOS */
 .atributos {
