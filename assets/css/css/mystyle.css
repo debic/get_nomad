@@ -253,12 +253,11 @@ video[poster] {
     color: #211915; }
   .atributos_temas p {
     margin-top: 8%; }
-  .atributos_temas .fila {
-    display: flex; }
 
 .atributos_bloques {
-  margin: 7%;
-  width: 25vw; }
+  margin: 5%;
+  width: 10vw !important;
+  min-width: 200px; }
 
 .atributos_gif {
   display: flex;
@@ -348,7 +347,8 @@ video[poster] {
   padding-bottom: 5%; }
 
 .tecnologia_titulo {
-  width: 60vw;
+  margin-left: 25% !important;
+  margin-right: 25% !important;
   margin: auto;
   padding-top: 7%; }
 
@@ -562,7 +562,9 @@ video[poster] {
   .tecnologia {
     padding-bottom: 15%; }
   .tecnologia_titulo {
-    padding-top: 100px; }
+    padding-top: 100px;
+    margin-left: 5% !important;
+    margin-right: 5% !important; }
   .tecnologia_modulos {
     flex-direction: column; }
   .tecnologia_bloque {
