@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Urbanist', sans-serif; }
+  font-family: 'Urbanist', sans-serif;
+  text-decoration: none; }
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -109,9 +110,8 @@ p {
 .inicio_button {
   background-color: #fff;
   padding: 14px;
-  margin-right: 10px; }
-  .inicio_button a {
-    color: #E54B0E !important; }
+  margin-right: 10px;
+  color: #E54B0E !important; }
 
 .inicio_button:hover {
   color: #E54B0E;
@@ -135,8 +135,6 @@ p {
     margin-top: 2%;
     text-align: center;
     color: white; }
-  .footer p:hover {
-    color: #D6D6D6; }
   .footer a {
     color: white;
     text-decoration: none; }
@@ -157,13 +155,15 @@ p {
   border-bottom: 1px solid white; }
   .footer_contacto img {
     width: 80px;
-    margin: auto;
     margin-bottom: 15%; }
+  .footer_contacto p:hover {
+    color: #D6D6D6; }
 
 .footer_contacto_icon {
   width: 200px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .footer_contacto_icon p {
     color: white;
     text-align: center; }
@@ -175,9 +175,12 @@ p {
   margin: auto;
   margin-top: 5%; }
   .footer_rrss img {
-    width: 80px;
+    width: 70px;
     margin: auto;
     margin-bottom: 15%; }
+
+.derechos a {
+  text-decoration: underline; }
 
 /* BANNER INICIO */
 .banner {
@@ -397,7 +400,8 @@ h1 {
 
 .item_img {
   max-width: 200px;
-  margin: auto; }
+  margin: auto;
+  padding: 15%; }
 
 .slick-dots li button:before {
   color: #fff !important; }
@@ -512,6 +516,16 @@ h1 {
   display: flex;
   flex-direction: column; }
 
+@media (max-width: 1440px) {
+  .content {
+    padding: 0 60px; }
+  h2 {
+    font-size: 2em !important; } }
+
+@media (max-width: 1100px) {
+  .content {
+    padding: 0 40px; } }
+
 @media (max-width: 1067px) {
   .menu-list li a {
     text-align: center;
@@ -522,14 +536,6 @@ h1 {
     margin-right: 12px;
     text-decoration: none;
     transition: all 0.3s ease; } }
-
-@media (max-width: 1230px) {
-  .content {
-    padding: 0 60px; } }
-
-@media (max-width: 1100px) {
-  .content {
-    padding: 0 40px; } }
 
 @media (max-width: 900px) {
   .content {
@@ -625,6 +631,8 @@ h1 {
   .derechos {
     width: 70vw;
     margin: auto; }
+    .derechos a {
+      text-decoration: underline; }
   p {
     font-size: 1em;
     margin-top: 5%; }

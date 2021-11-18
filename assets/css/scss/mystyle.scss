@@ -1,11 +1,21 @@
 $naranjo: #E54B0E;
 $gris:#333333;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap');
+
+.desktop{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Urbanist', sans-serif;
+  text-decoration: none;
 }
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -84,6 +94,7 @@ p{
    border-radius: 10px;
 }
 .menu-list li a{
+  text-align: center;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -109,37 +120,111 @@ padding:12px;
 border: 2px solid $naranjo;
 }
 
+.inicio_button{
+background-color: #fff;
+padding:14px;
+margin-right: 10px;
+color:$naranjo!important;
+}
+
+.inicio_button:hover{
+color: $naranjo;
+background-color: transparent;
+padding:12px;
+border: 2px solid #fff;
+}
+
 /* FOOTER */
 
 .footer{
 background-color: $gris;
 display: flex;
+flex-direction: column;
 justify-content: space-around;
 padding:5%;
 
+h2 {
+  color: white;
+  width: 40%;
+  margin: auto;
+  font-size: 2em;
+}
+
 p{
-  color: white !important;
+  margin-top: 2%;
+  text-align: center;
+  color: white;
+}
+
+
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer_logo{
+display: flex;
+flex-direction: column;
+img{
+  margin: auto;
+  width: 350px;
+  margin-bottom: 5%;
+}
+}
+}
+
+.footer_contacto{
+display: flex;
+justify-content: space-around;
+width: 60vw;
+margin: auto;
+padding: 5%;
+border-bottom: 1px solid white;
+img{
+  width: 80px;
+  margin-bottom: 15%;
 }
 
 p:hover{
-  color: $naranjo !important;
+  color: #D6D6D6;
+}
 }
 
+.footer_contacto_icon{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  p{
+    color: white;
+    text-align: center;
+  }
 }
 
 .footer_rrss{
-display: flex;
-flex-direction: column !important;
+  display: flex;
+  justify-content: space-around;
+ width: 15vw;
+ margin: auto;
+ margin-top: 5%;
+ img{
+  width: 70px;
+  margin: auto;
+  margin-bottom: 15%;
+}
 }
 
-.footer_rrss_icon{
-  width: 70px;
-  float: right;
+.derechos{
+a{
+  text-decoration: underline;
 }
+}
+
 
 /* BANNER INICIO */
 .banner{
-  background: url("banner.jpg") no-repeat;
+
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -164,7 +249,7 @@ flex-direction: column !important;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;
+
 }
 
 .page-hero {
@@ -188,7 +273,7 @@ video[poster] {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/video banner_color.mp4");
+  
 
   /* Set a specific height */
   height: 90vh;
@@ -210,16 +295,21 @@ video[poster] {
   transform: translate(-50%, -50%);
   color: white;
 
-  h1{
-    font-size: 4em;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 600;
-  }
 
   p{
     font-size: 1.5em;
     width: 80%;
   }
+
+  .quote_one {
+  display: none;
+}
+
+.quote_two {
+  display: none;
+}
+
+
 
   .button{
     background-color: $naranjo;
@@ -240,6 +330,107 @@ video[poster] {
 
   .button-margin{
     margin-top: 5%;
+  }
+
+}
+
+
+h1 {
+  font-size: 4em;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  border-right: solid 3px #fff;
+  white-space: nowrap;
+  overflow: hidden;    
+}
+
+ 
+
+/* ANIMACIÓN */
+
+
+.typing0 h1{
+  animation: animated-text-typing0 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+.typing1 h1{
+  animation:
+              animated-text-typing1 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+ }
+
+ .typing2 h1{
+  animation: animated-text-typing2 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+.typing3 h1{
+  animation:
+              animated-text-typing3 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+ }
+
+ .typing4 h1{
+  animation:
+              animated-text-typing4 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+ }
+
+
+/* text animation */
+
+@keyframes animated-text-typing0{
+  from{width: 0;}
+  to{width: 450px;}
+}
+
+@keyframes animated-text-typing1{
+  from{width: 0;}
+  to{width: 520px;}
+}
+
+@keyframes animated-text-typing2{
+  from{width: 0;}
+  to{width: 500px;}
+}
+
+@keyframes animated-text-typing3{
+  from{width: 0;}
+  to{width: 570px;}
+}
+
+@keyframes animated-text-typing4{
+  from{width: 0;}
+  to{width: 500px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #fff;}
+  to{border-right-color: transparent;}
+}
+
+
+/* OMNICANALIDAD */
+.omnicanalidad{
+  display: flex;
+background-color:#DBDBDB;
+
+}
+
+.omnicanalidad_imagen{
+margin: auto;
+
+}
+
+.omnicanalidad_info{
+  display: flex;
+  flex-direction: column;
+  padding: 7%;
+  h2{
+      padding-bottom: 4%;
   }
 }
 
@@ -275,21 +466,20 @@ padding: 10%;
   h3{
     text-align: center;
     margin-top: 8%;
+    color: #211915;
   }
 
   p{
-    text-align: center;
+
     margin-top: 8%;
   }
 
-  .fila{
-display: flex;
-  }
 
 }
 .atributos_bloques{
-  margin: 7%;
-  width: 25vw;
+  margin: 5%;
+  width: 10vw!important;
+  min-width: 200px;
 }
 
 .atributos_gif{
@@ -298,14 +488,22 @@ display: flex;
   margin: auto;
 }
 
+/* ZONAS */
+.zonas{
+  background-color: #343333;
+  img{
+    width: 100vw;
+  }
+}
+
 /* CAROUSEL */
 
 .confiaron{
   background-color: #343333;
+  padding: 8%;
   h2{
     color: white;
     text-align: center;
-    padding-top: 7%;
     padding-bottom: 4%;
   }
 }
@@ -313,13 +511,14 @@ display: flex;
 .confiaron_carousel{
   width: 60vw;
   margin: auto;
-  padding-bottom: 4%;
+
 }
 
 
 .item_img{
     max-width: 200px;
     margin: auto;
+    padding: 15%;
 }
 
 .slick-dots li button:before {
@@ -401,6 +600,9 @@ justify-content: center;
 }
 
 .tecnologia_titulo{
+  margin-left: 25%!important;
+  margin-right: 25%!important;
+  margin: auto;
   padding-top: 7%;
 }
 
@@ -432,26 +634,43 @@ justify-content: center;
 
 /* PASOS */
 .pasos{
+  position:relative;
   background-color: #DBDBDB;
   display: flex;
   flex-direction: column;
       padding-top: 7%;
       padding-bottom: 7%;
 
-  img{
+  .pasossvg{
     width: 70%;
     margin: auto;
+    position: relative; 
+    z-index: 3;
+  }
+
+  .pasosgif{
+    position: absolute;
+    width: 43%; 
+    bottom: 4%; 
+    left: 28%;
   }
 }
+
+
 
 .contacto{
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 1230px) {
+
+
+@media (max-width: 1440px) {
   .content{
     padding: 0 60px;
+  }
+  h2{
+    font-size: 2em !important;
   }
 }
 @media (max-width: 1100px) {
@@ -459,12 +678,34 @@ justify-content: center;
     padding: 0 40px;
   }
 }
+
+@media (max-width: 1067px) {
+.menu-list li a{
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-right: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+}
+
 @media (max-width: 900px) {
   .content{
     padding: 0 30px;
   }
 }
 @media (max-width: 868px) {
+  .desktop{
+  display: none;
+}
+.mobile{
+  display: block;
+}
+
   body.disabled{
     overflow: hidden;
   }
@@ -519,10 +760,72 @@ justify-content: center;
     font-size: 27px;
   }
 
-  h1{
-    font-size: 1em;
-margin-top: 10%;
-  }
+
+  .footer{
+padding-top: 15% !important;
+h2 {
+  color: white;
+  width: 80%;
+  margin: auto;
+  font-size: 2em;
+}
+
+}
+
+.footer_contacto{
+display: flex;
+flex-direction: column;
+align-content: center;
+img{
+  margin-bottom: 0;
+}
+}
+
+.footer_rrss{
+  margin-top: 15%;
+}
+
+.footer_contacto_icon{
+  margin-top: 20%;
+  margin: auto;
+  margin: 15%;
+}
+
+/* text animation */
+
+@keyframes animated-text-typing0{
+  from{width: 0;}
+  to{width: 45vw;}
+}
+
+@keyframes animated-text-typing1{
+  from{width: 0;}
+  to{width: 52vw;}
+}
+
+@keyframes animated-text-typing2{
+  from{width: 0;}
+  to{width: 51vw;}
+}
+
+@keyframes animated-text-typing3{
+  from{width: 0;}
+  to{width: 55vw;}
+}
+
+@keyframes animated-text-typing4{
+  from{width: 0;}
+  to{width: 48vw;}
+}
+
+.derechos{
+width: 70vw;
+margin: auto;
+a{
+  text-decoration: underline;
+}
+}
+
 
   p{
     font-size: 1em;
@@ -537,7 +840,7 @@ margin-top: 10%;
   .hero-text {
 
   h1{
-    font-size: 2.5em;
+    font-size: 2em;
     margin-top: 10%;
   }
 
@@ -557,6 +860,28 @@ margin-top: 10%;
     margin-top: 10%;
   }
 }
+
+/* OMNICANALIDAD */
+.omnicanalidad{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.omnicanalidad_imagen{
+margin: auto;
+
+}
+
+.omnicanalidad_info{
+  display: flex;
+  flex-direction: column;
+  padding: 7%;
+  h2{
+      padding-bottom: 4%;
+  }
+}
+
 .atributos_titulo{
 
 }
@@ -581,6 +906,50 @@ margin: auto;}
   width: 80vw;
 }
 
+.tecnologia_titulo{
+  margin-left: 5%!important;
+  margin-right: 5%!important;
+}
+
+.tecnologia{
+  padding-bottom: 15%;
+}
+
+.tecnologia_modulos{
+  flex-direction: column;
+}
+
+.tecnologia_bloque{
+width: 50vw;
+margin: auto;
+img{
+  width: 30vw;
+  margin: auto;
+margin-top: 25%;
+}
+}
+
+
+.pasos{
+  padding: 10%;
+  h2{
+width: 90%;
+padding-bottom: 5%;
+  }
+}
+
+  .pasossvg{
+    position: relative; 
+    z-index: 1;
+  }
+  .pasosgif{
+    position: absolute; 
+    bottom: 24% !important; 
+    left: 21% !important; 
+    width:60% !important;
+  }
+
+
 
 
 }
@@ -590,6 +959,8 @@ margin: auto;}
   .navbar .logo a{
     font-size: 27px;
   }
+
+
 
   .hero-text {
 
@@ -651,25 +1022,13 @@ h3{
   }
 
 }
+
+
+
 .footer_logo{
   margin: auto;
 }
 
-.footer_rrss{
-margin-top: 15%;
-margin-bottom: 15%;
-display: flex;
-flex-direction: column;
-}
-
-.footer_rrss_container{
-  display: flex;
-  justify-content: center;
-}
-
-.footer_rrss_icon{
-  float: left;
-}
 
 .atributos{
 width: 100vw;
@@ -722,6 +1081,8 @@ margin-bottom: 20%;
 
 .tecnologia_titulo{
    padding-top: 100px;
+  margin-left: 5%!important;
+  margin-right: 5%!important;
 }
 
 .tecnologia_modulos{
@@ -736,6 +1097,20 @@ img{
   margin: auto;
 margin-top: 25%;
 }
+}
+
+.pasos{
+
+  .pasossvg{
+    position: relative; 
+    z-index: 1;
+  }
+  .pasosgif{
+    position: absolute; 
+    bottom: 20% !important; 
+    left: 22%; 
+    width:60%
+  }
 }
 
 }
