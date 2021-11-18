@@ -1,4 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap");
+.desktop {
+  display: block; }
+
+.mobile {
+  display: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -116,20 +123,61 @@ p {
 .footer {
   background-color: #333333;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding: 5%; }
+  .footer h2 {
+    color: white;
+    width: 40%;
+    margin: auto;
+    font-size: 2em; }
   .footer p {
-    color: white !important; }
+    margin-top: 2%;
+    text-align: center;
+    color: white; }
   .footer p:hover {
-    color: #E54B0E !important; }
+    color: #D6D6D6; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+  .footer .footer_logo {
+    display: flex;
+    flex-direction: column; }
+    .footer .footer_logo img {
+      margin: auto;
+      width: 350px;
+      margin-bottom: 5%; }
+
+.footer_contacto {
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+  margin: auto;
+  padding: 5%;
+  border-bottom: 1px solid white; }
+  .footer_contacto img {
+    width: 80px;
+    margin: auto;
+    margin-bottom: 15%; }
+
+.footer_contacto_icon {
+  width: 200px;
+  display: flex;
+  flex-direction: column; }
+  .footer_contacto_icon p {
+    color: white;
+    text-align: center; }
 
 .footer_rrss {
   display: flex;
-  flex-direction: column !important; }
-
-.footer_rrss_icon {
-  width: 70px;
-  float: right; }
+  justify-content: space-around;
+  width: 15vw;
+  margin: auto;
+  margin-top: 5%; }
+  .footer_rrss img {
+    width: 80px;
+    margin: auto;
+    margin-bottom: 15%; }
 
 /* BANNER INICIO */
 .banner {
@@ -218,27 +266,78 @@ h1 {
   font-size: 4em;
   font-family: 'Urbanist', sans-serif;
   font-weight: 600;
-  border-right: solid 3px #E54B0E;
+  border-right: solid 3px #fff;
   white-space: nowrap;
   overflow: hidden; }
 
-/* Animation */
-h1 {
-  animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+/* ANIMACIÓN */
+.typing0 h1 {
+  animation: animated-text-typing0 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+
+.typing1 h1 {
+  animation: animated-text-typing1 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+
+.typing2 h1 {
+  animation: animated-text-typing2 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+
+.typing3 h1 {
+  animation: animated-text-typing3 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
+
+.typing4 h1 {
+  animation: animated-text-typing4 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite; }
 
 /* text animation */
-@keyframes animated-text {
+@keyframes animated-text-typing0 {
   from {
     width: 0; }
   to {
-    width: 600px; } }
+    width: 450px; } }
+
+@keyframes animated-text-typing1 {
+  from {
+    width: 0; }
+  to {
+    width: 520px; } }
+
+@keyframes animated-text-typing2 {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+
+@keyframes animated-text-typing3 {
+  from {
+    width: 0; }
+  to {
+    width: 570px; } }
+
+@keyframes animated-text-typing4 {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
 
 /* cursor animations */
 @keyframes animated-cursor {
   from {
-    border-right-color: #E54B0E; }
+    border-right-color: #fff; }
   to {
     border-right-color: transparent; } }
+
+/* OMNICANALIDAD */
+.omnicanalidad {
+  display: flex;
+  background-color: #DBDBDB; }
+
+.omnicanalidad_imagen {
+  margin: auto; }
+
+.omnicanalidad_info {
+  display: flex;
+  flex-direction: column;
+  padding: 7%; }
+  .omnicanalidad_info h2 {
+    padding-bottom: 4%; }
 
 /* ATRIBUTOS */
 .atributos {
@@ -282,17 +381,16 @@ h1 {
 
 /* CAROUSEL */
 .confiaron {
-  background-color: #343333; }
+  background-color: #343333;
+  padding: 8%; }
   .confiaron h2 {
     color: white;
     text-align: center;
-    padding-top: 7%;
     padding-bottom: 4%; }
 
 .confiaron_carousel {
   width: 60vw;
-  margin: auto;
-  padding-bottom: 4%; }
+  margin: auto; }
 
 .item_img {
   max-width: 200px;
@@ -396,9 +494,16 @@ h1 {
   flex-direction: column;
   padding-top: 7%;
   padding-bottom: 7%; }
-  .pasos img {
+  .pasos .pasossvg {
     width: 70%;
-    margin: auto; }
+    margin: auto;
+    position: relative;
+    z-index: 3; }
+  .pasos .pasosgif {
+    position: absolute;
+    width: 43%;
+    bottom: 4%;
+    left: 28%; }
 
 .contacto {
   display: flex;
@@ -428,6 +533,10 @@ h1 {
     padding: 0 30px; } }
 
 @media (max-width: 868px) {
+  .desktop {
+    display: none; }
+  .mobile {
+    display: block; }
   body.disabled {
     overflow: hidden; }
   h2 {
@@ -465,16 +574,61 @@ h1 {
     margin-left: 0px; }
   .navbar .logo a {
     font-size: 27px; }
-  h1 {
-    font-size: 1em;
-    margin-top: 10%; }
+  .footer {
+    padding-top: 15% !important; }
+    .footer h2 {
+      color: white;
+      width: 80%;
+      margin: auto;
+      font-size: 2em; }
+  .footer_contacto {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+    .footer_contacto img {
+      margin-bottom: 0; }
+  .footer_rrss {
+    margin-top: 15%; }
+  .footer_contacto_icon {
+    margin-top: 20%;
+    margin: auto;
+    margin: 15%; }
+  /* text animation */
+  @keyframes animated-text-typing0 {
+    from {
+      width: 0; }
+    to {
+      width: 45vw; } }
+  @keyframes animated-text-typing1 {
+    from {
+      width: 0; }
+    to {
+      width: 52vw; } }
+  @keyframes animated-text-typing2 {
+    from {
+      width: 0; }
+    to {
+      width: 51vw; } }
+  @keyframes animated-text-typing3 {
+    from {
+      width: 0; }
+    to {
+      width: 55vw; } }
+  @keyframes animated-text-typing4 {
+    from {
+      width: 0; }
+    to {
+      width: 48vw; } }
+  .derechos {
+    width: 70vw;
+    margin: auto; }
   p {
     font-size: 1em;
     margin-top: 5%; }
   .button {
     font-size: 1em !important; }
   .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-top: 10%; }
   .hero-text p {
     font-size: 1em;
@@ -486,6 +640,18 @@ h1 {
     font-size: 1em; }
   .hero-text .button-margin {
     margin-top: 10%; }
+  /* OMNICANALIDAD */
+  .omnicanalidad {
+    display: flex;
+    flex-direction: column; }
+  .omnicanalidad_imagen {
+    margin: auto; }
+  .omnicanalidad_info {
+    display: flex;
+    flex-direction: column;
+    padding: 7%; }
+    .omnicanalidad_info h2 {
+      padding-bottom: 4%; }
   .servicios_titulo {
     width: 80vw; }
   .servicios_modulos {
@@ -498,7 +664,34 @@ h1 {
   .servicio_2 {
     margin-top: 8%;
     margin-bottom: 8%;
-    width: 80vw; } }
+    width: 80vw; }
+  .tecnologia_titulo {
+    margin-left: 5% !important;
+    margin-right: 5% !important; }
+  .tecnologia {
+    padding-bottom: 15%; }
+  .tecnologia_modulos {
+    flex-direction: column; }
+  .tecnologia_bloque {
+    width: 50vw;
+    margin: auto; }
+    .tecnologia_bloque img {
+      width: 30vw;
+      margin: auto;
+      margin-top: 25%; }
+  .pasos {
+    padding: 10%; }
+    .pasos h2 {
+      width: 90%;
+      padding-bottom: 5%; }
+  .pasossvg {
+    position: relative;
+    z-index: 1; }
+  .pasosgif {
+    position: absolute;
+    bottom: 24% !important;
+    left: 21% !important;
+    width: 60% !important; } }
 
 /* MOBILE */
 @media (max-width: 425px) {
@@ -539,16 +732,6 @@ h1 {
       margin-top: 2%; }
   .footer_logo {
     margin: auto; }
-  .footer_rrss {
-    margin-top: 15%;
-    margin-bottom: 15%;
-    display: flex;
-    flex-direction: column; }
-  .footer_rrss_container {
-    display: flex;
-    justify-content: center; }
-  .footer_rrss_icon {
-    float: left; }
   .atributos {
     width: 100vw; }
   .atributos_temas {
@@ -589,7 +772,15 @@ h1 {
     .tecnologia_bloque img {
       width: 30vw;
       margin: auto;
-      margin-top: 25%; } }
+      margin-top: 25%; }
+  .pasos .pasossvg {
+    position: relative;
+    z-index: 1; }
+  .pasos .pasosgif {
+    position: absolute;
+    bottom: 20% !important;
+    left: 22%;
+    width: 60%; } }
 
 @media screen and (min-width: 750px) and (orientation: landscape) {
   .hero-text h1 {
