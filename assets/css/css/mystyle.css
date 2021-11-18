@@ -181,7 +181,6 @@ p {
 
 /* BANNER INICIO */
 .banner {
-  background: url("banner.jpg") no-repeat;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -203,8 +202,7 @@ p {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  opacity: 0.5; }
+  left: 0; }
 
 .page-hero {
   position: relative;
@@ -222,7 +220,6 @@ video[poster] {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/video banner_color.mp4");
   /* Set a specific height */
   height: 90vh;
   /* Position and center the image to scale nicely on all screens */
@@ -378,6 +375,12 @@ h1 {
   display: flex;
   flex-direction: row;
   margin: auto; }
+
+/* ZONAS */
+.zonas {
+  background-color: #343333; }
+  .zonas img {
+    width: 100vw; }
 
 /* CAROUSEL */
 .confiaron {
